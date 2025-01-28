@@ -1,10 +1,6 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
-import '../wallet/model/expense_model.dart';
-
-
-
 class DatabaseHelper {
   static final DatabaseHelper instance = DatabaseHelper._privateConstructor();
   static Database? _database;
@@ -37,34 +33,14 @@ class DatabaseHelper {
         desc TEXT NOT NULL
       )
     ''');
-  }
 
-
-  Future<List<ExpenseModel>> getAllExpense() async {
-    final db = await database;
-    final result = await db.query('expense');
-    return result.map((map) => ExpenseModel.fromMap(map)).toList();
+    await db.execute('''
+      CREATE TABLE users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        password TEXT NOT NULL,
+        email TEXT NOT NULL UNIQUE
+      );
+    ''');
   }
-  //
-  // Future<List<ExpenseModel>> getUserImages(userId) async {
-  //   final db = await database;
-  //   final result = await db.query('user_images' , where: "userId = ?" , whereArgs: [userId]);
-  //   return result.map((map) => ExpenseModel.fromMap(map)).toList();
-  // }
-  //
-  Future<int> insertExpense(ExpenseModel expenseModel) async {
-    final db = await database;
-    return await db.insert('expense', expenseModel.toMap());
-  }
-  //
-  // Future<int> updateUserImage(UserImage userImage) async {
-  //   final db = await database;
-  //   return await db.update(
-  //     'user_images',
-  //     userImage.toMap(),
-  //     where: 'userId = ?',
-  //     whereArgs: [userImage.userId],
-  //   );
-  // }
 
 }
