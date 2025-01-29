@@ -1,16 +1,121 @@
-# e_wallet_app
+# User Details App
 
-A new Flutter project.
+This application demonstrates user details management with features including Store Payment Data in wallet with persistence using Sqflite. The app is designed with a responsive UI and implements Bloc architecture with Flutter Bloc for state management.
 
-## Getting Started
+![Simulator Screenshot - iPhone 15 Pro - 2025-01-29 at 02 49 44](https://github.com/user-attachments/assets/c160998b-e900-46f9-b0a1-1eba0a448a06)
+![Simulator Screenshot - iPhone 15 Pro - 2025-01-29 at 02 49 26](https://github.com/user-attachments/assets/96df1c7f-ccda-4257-ae24-e916c8aba9af)
+![Simulator Screenshot - iPhone 15 Pro - 2025-01-29 at 02 49 21](https://github.com/user-attachments/assets/84315fb2-d7bc-458d-9982-cda3aa5a114c)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Features
+
+1. **Login**:
+   - User Login And Register With Data Persistance.
+2. **Fetch User Details**:
+   - Retrieves user details from an API and displays them in a `ListView`.
+3. **Add Payment**:
+   - Add Form for data input.
+4. **Responsive Design**:
+   - Ensures a user-friendly design that adapts to various screen sizes.
+
+## Architecture
+
+- **Bloc Architecture**:
+  - Bloc pattern for clean separation of concerns.
+- **State Management**:
+  - Utilizes Bloc for efficient state management and navigation.
+
+## Permissions
+
+- Write Permission
+- Read Permission
+
+## Setup Instructions
+
+### Prerequisites
+
+1. **Flutter SDK**: Ensure Flutter is installed on your system. [Install Flutter](https://flutter.dev/docs/get-started/install)
+2. **API Endpoint**: Replace the placeholder in the `ApiService` with your actual API URL.
+3. **Emulator/Device**: Ensure you have a connected device or emulator with the required permissions enabled.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository_url>
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd user_details_app
+   ```
+3. Install dependencies:
+   ```bash
+   flutter pub get
+   ```
+4. Generate required files for Hive (if using):
+   ```bash
+   flutter packages pub run build_runner build
+   ```
+5. Run the app:
+   ```bash
+   flutter run
+   ```
+
+## Usage
+
+### Location Display
+
+- Grant location permissions when prompted.
+- The app will display the current latitude, longitude, and address at the top.
+
+### User List
+
+- Fetches user details from the configured API.
+- Displays each user's avatar and details in a `ListView`.
+
+### Image Upload
+
+1. Click the upload icon next to a user.
+2. Choose the source (Gallery or Camera).
+3. After uploading, the image will replace the API-provided avatar.
+4. The uploaded image is stored locally and persists across restarts.
+
+### Responsive Design
+
+- The app adapts seamlessly to different screen sizes and orientations.
+
+## Dependencies
+
+- **GetX**: State management and navigation.
+- **Hive/Sqflite**: Local storage for uploaded images.
+- **Geolocator**: Fetching location details.
+- **Permission Handler**: Managing app permissions.
+- **Image Picker**: For accessing the gallery and camera.
+
+## Troubleshooting
+
+1. **Permission Issues**:
+   - Ensure all required permissions are granted.
+   - Use the app settings to manually enable permissions if needed.
+
+2. **API Connectivity**:
+   - Check the API endpoint configuration in the `ApiService`.
+   - Verify network connectivity.
+
+3. **Storage Persistence**:
+   - Ensure Hive/Sqflite is configured correctly.
+   - Rebuild the project if necessary after any storage-related changes:
+     ```bash
+     flutter clean && flutter pub get
+     ```
+
+## Contributions
+
+Feel free to fork the repository and submit pull requests for improvements or feature additions.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
