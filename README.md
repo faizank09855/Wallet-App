@@ -63,24 +63,6 @@ This application demonstrates user details management with features including St
    flutter run
    ```
 
-## Usage
-
-### Location Display
-
-- Grant location permissions when prompted.
-- The app will display the current latitude, longitude, and address at the top.
-
-### User List
-
-- Fetches user details from the configured API.
-- Displays each user's avatar and details in a `ListView`.
-
-### Image Upload
-
-1. Click the upload icon next to a user.
-2. Choose the source (Gallery or Camera).
-3. After uploading, the image will replace the API-provided avatar.
-4. The uploaded image is stored locally and persists across restarts.
 
 ### Responsive Design
 
@@ -88,11 +70,10 @@ This application demonstrates user details management with features including St
 
 ## Dependencies
 
-- **GetX**: State management and navigation.
-- **Hive/Sqflite**: Local storage for uploaded images.
-- **Geolocator**: Fetching location details.
+- **Bloc**: State management and navigation.
+- **Sqflite**: Local storage for uploaded images.
 - **Permission Handler**: Managing app permissions.
-- **Image Picker**: For accessing the gallery and camera.
+- **Intl**: For accessing the gallery and camera.
 
 ## Troubleshooting
 
