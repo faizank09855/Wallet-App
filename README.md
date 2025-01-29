@@ -1,11 +1,11 @@
 # User Details App
 
 This application demonstrates user details management with features including Store Payment Data in wallet with persistence using Sqflite. The app is designed with a responsive UI and implements Bloc architecture with Flutter Bloc for state management.
-
-![Simulator Screenshot - iPhone 15 Pro - 2025-01-29 at 02 49 44](https://github.com/user-attachments/assets/c160998b-e900-46f9-b0a1-1eba0a448a06)
-![Simulator Screenshot - iPhone 15 Pro - 2025-01-29 at 02 49 26](https://github.com/user-attachments/assets/96df1c7f-ccda-4257-ae24-e916c8aba9af)
-![Simulator Screenshot - iPhone 15 Pro - 2025-01-29 at 02 49 21](https://github.com/user-attachments/assets/84315fb2-d7bc-458d-9982-cda3aa5a114c)
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c160998b-e900-46f9-b0a1-1eba0a448a06" width="30%" />
+  <img src="https://github.com/user-attachments/assets/96df1c7f-ccda-4257-ae24-e916c8aba9af" width="30%" />
+  <img src="https://github.com/user-attachments/assets/84315fb2-d7bc-458d-9982-cda3aa5a114c" width="30%" />
+</p>
 
 
 
